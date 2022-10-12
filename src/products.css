@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cards {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow-x: scroll;
+  background-color: #01182f;
+  color:black;
+  font-family: monospace;
+}
+
+.product-card {
+  padding: 150px 55px 40px;
+  border-radius: 0.3em;
+  z-index: 3;
+  margin: 5em;
+
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.09)
+  );
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
+}
+
+.overflow-container {
+  overflow: hidden;
+}
+
+img {
+  position: absolute;
+  background-size: 50%;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 17.8em;
+  height: 27em;
+  top: -9.5em;
+  left: -3.45em;
+  transition-duration: 0.5s;
+  border-radius: 1em;
+}
+
+h2 {
+  letter-spacing: 1px;
+  background-color: #01182f;
+  color: aliceblue;
+  padding: 10px;
+  text-align: center;
+  margin: 0px
+}
+
+h3 {
+  letter-spacing: 1px;
+  color: black
+}
+
+p {
+  text-transform: uppercase;
+  font-size: smaller;
+}
+
+.size-container {
+  margin-top: 15px;
+  display: flex;
+}
+
+.size-container > :first-child {
+  margin-right: 0.5em;
+}
+
+.size {
+  display: flex;
+}
+
+.size p {
+  background-color: white;
+  color: black;
+  font-size: smaller;
+  font-weight: bold;
+  padding: 0.1em 0.4em;
+  margin: 0 0.3em;
+  border-radius: 0.3em;
+  cursor: pointer;
+  transition: all linear ease-out;
+  height: 2em;
+  width: 2em;
+}
+
+.size p:hover {
+  transform: scale(1.1);
+  background-color: rgb(83, 214, 83);
+}
+
+.ratings {
+  display: flex;
+  margin: 15px 0 25px;
+}
+
+.ratings div {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: yellow;
+}
+
+.button {
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  text-transform: capitalize;
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  margin-bottom: 5px;
+  border-radius: 2em;
+  cursor: pointer;
+
+  transition: all linear infinite;
+}
+
+.button:hover {
+  transform: scale(1.07);
+}
+
+/* Adding Animation */
+
+.second-container,
+.first-container h3 {
+  transform: translateY(200%);
+  transition: transform 800ms ease;
+}
+
+.first-container {
+  position: relative;
+}
+
+/*.black-shoe {
+  width: 16em;
+  height: 21em;
+
+  top: -13em;
+  left: -3.5em;
+}
+
+.blue-shoe {
+  width: 15em;
+  height: 15em;
+
+  top: -9em;
+  left: -2.9em;
+}
+
+.red-shoe {
+  width: 17em;
+  height: 17.5em;
+
+  top: -11em;
+  left: -3.9em;
+} */
+
+.product-card:hover .second-container {
+  transform: translateY(0%);
+}
+
+.product-card:hover .first-container h3 {
+  transform: translateY(0%);
+}
+
+.product-card:hover img {
+  transition: 500ms linear all;
+}
+
+.product-card:hover .first-container img {
+  transform: rotateZ(-45deg) scale(1.2);
+}
+
+
+/* BACKGROUND CIRCLES */
+.circle-top {
+  background: linear-gradient(
+    to right,
+    rgb(47, 58, 86, 0.9),
+    rgb(64, 109, 150, 0.1)
+  );
+  width: 50em;
+  height: 50em;
+  border-radius: 50em;
+  position: absolute;
+  top: -20em;
+  right: -20em;
+}
+
+.circle-bottom {
+  background: linear-gradient(
+    to right,
+    rgb(64, 109, 150, 0.4),
+    rgb(226, 71, 75, 0.7)
+  );
+  width: 50em;
+  height: 50em;
+  border-radius: 50em;
+  position: absolute;
+  bottom: -20em;
+  left: -20em;
+}

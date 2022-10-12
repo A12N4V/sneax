@@ -1,0 +1,12 @@
+.reflow-shopping-cart{
+	margin: 5vh 7.5vw;
+	background-color: rgba(11, 107, 151, 0.171);
+	padding: 4%;
+	border-radius: 10px;
+}
+.remove{
+	color: #000;
+}
+.remove:hover{
+	text-decoration: underline;
+}
